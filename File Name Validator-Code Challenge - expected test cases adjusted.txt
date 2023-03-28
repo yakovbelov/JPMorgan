@@ -1,0 +1,12 @@
+Test Input and expected output (can be in any order)
+
+Filename					Expected output
+Test_A_07121987_22.csv		File 'Test_A_07121987.csv' passed validation.
+Test_E_07121987_22.csv		File 'Test_E_07121987.csv' failed validation. PortfolioCode should be 'A/B/C' found 'E'.
+Test_A_13131987_22.csv		File 'Test_A_13131987_22.csv' failed validation. Valuation Date '13131987' is not a valid date format 'ddmmyyyy'.
+Hello_A_07121987_22.csv		File 'Hello_A_07121987.csv' failed validation. Prefix for the file should be 'Test' found 'Hello'.
+Test_A_07121987_22.txt		File 'Test_A_07121987.txt' failed validation. Invalid File format. Expected 'csv' found 'txt'.
+Test_A_07121987_222.csv		File 'Test_A_07121987_222.csv' failed validation. Sequence is expected to be a 2 digits number found '222'.
+Test_A_07121987_a2.csv		File 'Test_A_07121987_a2.csv' failed validation. Sequence is expected to be a 2 digits number found 'a2'.
+Test_A_07121987.csv			File 'Test_A_07121987.csv' failed validation. File format should be 'Test_<portfoliocode>_<ddmmyyyy>_<2digit-sequencenumber>.csv'.
+Test.txt					File 'Test.txt' failed validation. File format should be 'Test_<portfoliocode>_<ddmmyyyy>_<2digit-sequencenumber>.csv'.

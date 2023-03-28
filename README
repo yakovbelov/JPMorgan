@@ -1,0 +1,41 @@
+1. Quick start
+a) create JPMorgan folder either by extracting an archive or by cloning a repository
+b) cd JPMorgan\FilenameValidator
+c) make sure java is installed
+c) make sure %JAVA_HOME%/bin; is added to the path
+d) run FilenameValidator.bat
+e) once done Ctrl-c will allow to exit
+
+2. Overriding logging config
+Logging used is Java Default Logging with the usual config file located in %JAVA_HOM%/conf/logging.properties 
+For this application SimpleFormatter used for ConsoleHandler needs to be adjusted to look less like a log.
+To use a different logging properties file to what is used in the FilenameValidator.bat batch script currently one can use
+-Djava.util.logging.config.file=my_logging.properties
+
+3. Overriding application properties
+The text used by the app comes from a bundled properties file. It is possible to override this file with
+-Dcom.jpmorgan.validator.util.properties=my_FilenameValidator.properties
+There is a commented out example in the FilenameValidator.bat batch script
+
+4. IDE
+JPMorgan\FilenameValidator has source structure (standard Maven structure):
+- src\main\java
+- src\main\resources
+- src\test\java
+- src\test\resources - currently empty
+IDE used was Eclipse - there are Eclipse specific project and workspace settings files, however any other IDE supporting Java can be used.
+The fact, that there's no 3rd party dependencies and just core java libraries makes it easier. JDK version needed is 8.
+
+5. Assumptions
+General
+a) Java is installed or can be easily installed
+b) The code of this app won't be reused in multithreaded scenarios as it is not thread safe. This was done to save time, as multi-threading is not used in the app.
+c) Since the Task is meant to be delivered in as a professional way as possible the application has as much room for extension and modification as possible, 
+in terms of loosely coupled for modification Validation Code Parts and generalised for extension Error Message Text Assembly.
+
+Instructions
+a) The instructions are not complete and not correct and thus it was ok to complete and correct them.
+b) Sequence Number was not properly specified in terms of validation and error message.
+c) File format is used to mean both 1) file extension and 2) filename format - I am using File Extension and Filename Format.
+d) Valid Date Format in the instructions was incorrectly invalidated - this was adjusted.
+e) The new corrected and implemented "Expected Input-Output Test Cases" can be found in "File Name Validator-Code Challenge - expected test cases adjusted.txt".
